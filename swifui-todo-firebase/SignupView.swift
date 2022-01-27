@@ -6,8 +6,14 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct SignupView: View {
+    @State var navActive = false
+    @State var email = ""
+    @State var password = ""
+    @State var errorMessage = ""
     var body: some View {
         
         VStack {
@@ -29,18 +35,13 @@ struct SignupView: View {
             VStack {
                 HStack {
                     Image(systemName: "person.crop.circle.badge.exclamationmark")
-                    TextField("Enter first name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                }
-                .padding()
-                HStack {
-                    Image(systemName: "person.crop.circle.badge.exclamationmark")
-                    TextField("Enter Last name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Enter email address", text: $email)
                 }
                 .padding()
 
                 HStack {
                     Image(systemName: "eyebrow")
-                    TextField("Create a password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Create a password", text: $password)
                 }
                 .padding()
                 HStack {
@@ -49,18 +50,31 @@ struct SignupView: View {
                 }
                 .padding()
                 
+                NavigationLink(isActive: $navActive) {
+                    InsideView()
+                } label: {
+                    Button("SIGN UP") {
+                        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                            if error == nil {
                 
-                Button("SIGN UP") {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                                errorMessage = "Signup success"
+                                navActive = true
+                                
+                            } else {
+                                errorMessage = "Please enter correct details"
+                            }
+                        }
+                    }
+                    .foregroundColor(.teal)
+                    .buttonStyle(.bordered)
+                    .padding()
+
                 }
-                .foregroundColor(.teal)
-                .buttonStyle(.bordered)
-                .padding()
-            }
+
+                            }
             Spacer()
-            Text("Please fill all fields")
+            Text(errorMessage)
                 .foregroundColor(.red)
-                .hidden()
 
         }
     }

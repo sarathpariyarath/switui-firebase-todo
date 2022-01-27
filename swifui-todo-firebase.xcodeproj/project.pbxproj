@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37289FCB27A26C27004A30CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37289FCA27A26C27004A30CE /* GoogleService-Info.plist */; };
+		37289FCE27A26CD1004A30CE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37289FCD27A26CD1004A30CE /* File.swift */; };
 		3732574F279EBDE100FA1F32 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3732574E279EBDE100FA1F32 /* SignupView.swift */; };
-		37A14F6127A017750032B30C /* Poppins-Medium in Resources */ = {isa = PBXBuildFile; fileRef = 37A14F6027A017750032B30C /* Poppins-Medium */; };
-		37A14F6327A017E90032B30C /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37A14F6227A017E90032B30C /* Montserrat-VariableFont_wght.ttf */; };
+		379F8AE327A278970051B251 /* InsideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F8AE227A278970051B251 /* InsideView.swift */; };
 		37DD17A6279E9166000FBCC1 /* swifui_todo_firebaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */; };
 		37DD17A8279E9166000FBCC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD17A7279E9166000FBCC1 /* ContentView.swift */; };
 		37DD17AA279E9168000FBCC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DD17A9279E9168000FBCC1 /* Assets.xcassets */; };
 		37DD17AD279E9168000FBCC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DD17AC279E9168000FBCC1 /* Preview Assets.xcassets */; };
+		43AA9A694968B335F2898B10 /* Pods_swifui_todo_firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E745165BD49D7693FDC492 /* Pods_swifui_todo_firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37289FCA27A26C27004A30CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37289FCD27A26CD1004A30CE /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3732574E279EBDE100FA1F32 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		379F8AE227A278970051B251 /* InsideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideView.swift; sourceTree = "<group>"; };
 		37A14F5D27A016410032B30C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		37A14F6027A017750032B30C /* Poppins-Medium */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium"; sourceTree = "<group>"; };
-		37A14F6227A017E90032B30C /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		37DD17A2279E9166000FBCC1 /* swifui-todo-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifui-todo-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifui_todo_firebaseApp.swift; sourceTree = "<group>"; };
 		37DD17A7279E9166000FBCC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37DD17A9279E9168000FBCC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37DD17AC279E9168000FBCC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAC3DD6527D91ECCE080E217 /* Pods-swifui-todo-firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifui-todo-firebase.release.xcconfig"; path = "Target Support Files/Pods-swifui-todo-firebase/Pods-swifui-todo-firebase.release.xcconfig"; sourceTree = "<group>"; };
+		C1EDE9B549E121994B2597E9 /* Pods-swifui-todo-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifui-todo-firebase.debug.xcconfig"; path = "Target Support Files/Pods-swifui-todo-firebase/Pods-swifui-todo-firebase.debug.xcconfig"; sourceTree = "<group>"; };
+		D8E745165BD49D7693FDC492 /* Pods_swifui_todo_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swifui_todo_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43AA9A694968B335F2898B10 /* Pods_swifui_todo_firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37289FCC27A26CC0004A30CE /* firebase helper */ = {
+			isa = PBXGroup;
+			children = (
+				37289FCD27A26CD1004A30CE /* File.swift */,
+			);
+			path = "firebase helper";
+			sourceTree = "<group>";
+		};
 		37DD1799279E9166000FBCC1 = {
 			isa = PBXGroup;
 			children = (
 				37DD17A4279E9166000FBCC1 /* swifui-todo-firebase */,
 				37DD17A3279E9166000FBCC1 /* Products */,
+				8D80EB74660A7C8332A44234 /* Pods */,
+				9212FEB4E032F882EA641BDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +75,14 @@
 		37DD17A4279E9166000FBCC1 /* swifui-todo-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				37289FCC27A26CC0004A30CE /* firebase helper */,
 				37A14F5D27A016410032B30C /* Info.plist */,
+				37289FCA27A26C27004A30CE /* GoogleService-Info.plist */,
 				37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */,
 				37DD17A7279E9166000FBCC1 /* ContentView.swift */,
+				379F8AE227A278970051B251 /* InsideView.swift */,
 				3732574E279EBDE100FA1F32 /* SignupView.swift */,
 				37DD17A9279E9168000FBCC1 /* Assets.xcassets */,
-				37A14F6027A017750032B30C /* Poppins-Medium */,
-				37A14F6227A017E90032B30C /* Montserrat-VariableFont_wght.ttf */,
 				37DD17AB279E9168000FBCC1 /* Preview Content */,
 			);
 			path = "swifui-todo-firebase";
@@ -78,6 +96,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8D80EB74660A7C8332A44234 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1EDE9B549E121994B2597E9 /* Pods-swifui-todo-firebase.debug.xcconfig */,
+				AAC3DD6527D91ECCE080E217 /* Pods-swifui-todo-firebase.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9212FEB4E032F882EA641BDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8E745165BD49D7693FDC492 /* Pods_swifui_todo_firebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37DD17B0279E9168000FBCC1 /* Build configuration list for PBXNativeTarget "swifui-todo-firebase" */;
 			buildPhases = (
+				5EAC1C35A86F15858894A75E /* [CP] Check Pods Manifest.lock */,
 				37DD179E279E9166000FBCC1 /* Sources */,
 				37DD179F279E9166000FBCC1 /* Frameworks */,
 				37DD17A0279E9166000FBCC1 /* Resources */,
+				CB0F07D8DE2E7DD346F3A613 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,14 +174,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A14F6327A017E90032B30C /* Montserrat-VariableFont_wght.ttf in Resources */,
 				37DD17AD279E9168000FBCC1 /* Preview Assets.xcassets in Resources */,
-				37A14F6127A017750032B30C /* Poppins-Medium in Resources */,
 				37DD17AA279E9168000FBCC1 /* Assets.xcassets in Resources */,
+				37289FCB27A26C27004A30CE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EAC1C35A86F15858894A75E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swifui-todo-firebase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB0F07D8DE2E7DD346F3A613 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swifui-todo-firebase/Pods-swifui-todo-firebase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swifui-todo-firebase/Pods-swifui-todo-firebase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swifui-todo-firebase/Pods-swifui-todo-firebase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37DD179E279E9166000FBCC1 /* Sources */ = {
@@ -151,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3732574F279EBDE100FA1F32 /* SignupView.swift in Sources */,
+				37289FCE27A26CD1004A30CE /* File.swift in Sources */,
 				37DD17A8279E9166000FBCC1 /* ContentView.swift in Sources */,
 				37DD17A6279E9166000FBCC1 /* swifui_todo_firebaseApp.swift in Sources */,
+				379F8AE327A278970051B251 /* InsideView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +358,7 @@
 		};
 		37DD17B1279E9168000FBCC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1EDE9B549E121994B2597E9 /* Pods-swifui-todo-firebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -308,6 +390,7 @@
 		};
 		37DD17B2279E9168000FBCC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAC3DD6527D91ECCE080E217 /* Pods-swifui-todo-firebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

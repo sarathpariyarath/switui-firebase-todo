@@ -6,13 +6,24 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct swifui_todo_firebaseApp: App {
+    var content = ContentView()
+    init() {
+        FirebaseApp.configure()
+      
+    }
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                if loginState == false {
+                    ContentView()
+                } else {
+                    InsideView()
+                }
+                
             }
         }
     }

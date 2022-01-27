@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
+
+var loginState = UserDefaults.standard.bool(forKey: "userLog")
 
 struct ContentView: View {
     
     @State var usernameTextField: String = ""
     @State var passwordTextField: String = ""
-    @State var signUpActive = false
-    @State var showError = false
+    @State var navStatus = false
     var body: some View {
         
         
@@ -47,14 +50,32 @@ struct ContentView: View {
                         .padding()
                         .background(Color.gray.opacity(0.1))
                     }
-                    
-                    Button("Sign in") {
-                        print("Hello")
+                    NavigationLink(isActive: $navStatus) {
+                        InsideView()
+                    } label: {
+                        Button("Sign in") {
+                            Auth.auth().signIn(withEmail: usernameTextField, password: passwordTextField) { result, error in
+                                if error == nil {
+                                    guard let userEmail = Auth.auth().currentUser?.email else {return}
+                                    navStatus = true
+                                    Firestore.firestore().collection("users").document(userEmail).setData(["name":"hey"])
+                                    print("Sign in success")
+                                    loginState = true
+                                    UserDefaults.standard.set(loginState, forKey: "userLog")
+                                    
+                                } else {
+                                    print(error)
+                                }
+                            }
+                            print("Hello")
+                        }
+                        .padding(12.0)
+                        .buttonStyle(.bordered)
+                        .foregroundColor(.teal)
                     }
-                    .padding(12.0)
-                    .buttonStyle(.bordered)
-                    .foregroundColor(.teal)
-                    
+
+
+                                        
                     Text("Invalid entry")
                         .foregroundColor(.red)
                         .padding()
@@ -64,7 +85,7 @@ struct ContentView: View {
                     HStack {
                         Text("New here?")
                             .padding()
-                        NavigationLink(destination: SignupView()) {
+                        NavigationLink(destination:  SignupView()) {
 //                            Button("Create an account") {
 //                            signUpActive = true
 //                                print(passwordTextField)
@@ -78,7 +99,7 @@ struct ContentView: View {
                     
                     Spacer()
                 }
-            
+                .navigationBarBackButtonHidden(true)
         
     }
 }
