@@ -66,7 +66,7 @@ struct ContentView: View {
                                     print(error!)
                                 }
                             }
-                            print("Hello")
+                            
                         }
                         .padding(12.0)
                         .buttonStyle(.bordered)

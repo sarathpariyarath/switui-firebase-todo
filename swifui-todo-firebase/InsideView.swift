@@ -34,7 +34,19 @@ struct InsideView: View {
                 Spacer()
                 
                 List (modal.list) { items in
-                    Text(items.titleName)
+                    HStack {
+                        Text(items.titleName)
+                        Spacer()
+                        Button {
+                            guard let user = Auth.auth().currentUser?.email else { return }
+                            modal.deleteTodo(email: user, todo: items)
+                        } label: {
+                            Image(systemName: "trash.circle.fill")
+                        }
+                        .buttonStyle(.borderless)
+                        .foregroundColor(.teal)
+
+                    }
                 }
                 
                 HStack {

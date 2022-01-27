@@ -7,7 +7,8 @@
 
 import Foundation
 import FirebaseFirestore
-
+import UIKit
+import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published var list = [Todo]()
@@ -34,5 +35,12 @@ class ViewModel: ObservableObject {
         let db = Firestore.firestore()
         db.collection("users").document(email).collection("todos").addDocument(data: ["titleName" : taskName, "isCompleted" : false])
         getTodo(email: email)
+    }
+    
+    func deleteTodo(email: String, todo: Todo){
+        let db = Firestore.firestore()
+        db.collection("users").document(email).collection("todos").document(todo.id).delete()
+        getTodo(email: email)
+        
     }
 }
