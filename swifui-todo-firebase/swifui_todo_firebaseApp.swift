@@ -11,7 +11,9 @@ import SwiftUI
 struct swifui_todo_firebaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
         }
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3732574F279EBDE100FA1F32 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3732574E279EBDE100FA1F32 /* SignupView.swift */; };
+		37A14F6127A017750032B30C /* Poppins-Medium in Resources */ = {isa = PBXBuildFile; fileRef = 37A14F6027A017750032B30C /* Poppins-Medium */; };
+		37A14F6327A017E90032B30C /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37A14F6227A017E90032B30C /* Montserrat-VariableFont_wght.ttf */; };
 		37DD17A6279E9166000FBCC1 /* swifui_todo_firebaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */; };
 		37DD17A8279E9166000FBCC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD17A7279E9166000FBCC1 /* ContentView.swift */; };
 		37DD17AA279E9168000FBCC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DD17A9279E9168000FBCC1 /* Assets.xcassets */; };
@@ -14,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3732574E279EBDE100FA1F32 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		37A14F5D27A016410032B30C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		37A14F6027A017750032B30C /* Poppins-Medium */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium"; sourceTree = "<group>"; };
+		37A14F6227A017E90032B30C /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		37DD17A2279E9166000FBCC1 /* swifui-todo-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifui-todo-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifui_todo_firebaseApp.swift; sourceTree = "<group>"; };
 		37DD17A7279E9166000FBCC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,9 +58,13 @@
 		37DD17A4279E9166000FBCC1 /* swifui-todo-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				37A14F5D27A016410032B30C /* Info.plist */,
 				37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */,
 				37DD17A7279E9166000FBCC1 /* ContentView.swift */,
+				3732574E279EBDE100FA1F32 /* SignupView.swift */,
 				37DD17A9279E9168000FBCC1 /* Assets.xcassets */,
+				37A14F6027A017750032B30C /* Poppins-Medium */,
+				37A14F6227A017E90032B30C /* Montserrat-VariableFont_wght.ttf */,
 				37DD17AB279E9168000FBCC1 /* Preview Content */,
 			);
 			path = "swifui-todo-firebase";
@@ -125,7 +136,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A14F6327A017E90032B30C /* Montserrat-VariableFont_wght.ttf in Resources */,
 				37DD17AD279E9168000FBCC1 /* Preview Assets.xcassets in Resources */,
+				37A14F6127A017750032B30C /* Poppins-Medium in Resources */,
 				37DD17AA279E9168000FBCC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3732574F279EBDE100FA1F32 /* SignupView.swift in Sources */,
 				37DD17A8279E9166000FBCC1 /* ContentView.swift in Sources */,
 				37DD17A6279E9166000FBCC1 /* swifui_todo_firebaseApp.swift in Sources */,
 			);
@@ -272,6 +286,8 @@
 				DEVELOPMENT_TEAM = TYF3JXGVJQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swifui-todo-firebase/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +317,8 @@
 				DEVELOPMENT_TEAM = TYF3JXGVJQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swifui-todo-firebase/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
