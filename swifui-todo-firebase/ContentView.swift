@@ -12,7 +12,7 @@ import FirebaseFirestore
 var loginState = UserDefaults.standard.bool(forKey: "userLog")
 
 struct ContentView: View {
-    
+    let viewModel = ViewModel()
     @State var usernameTextField: String = ""
     @State var passwordTextField: String = ""
     @State var navStatus = false
@@ -54,17 +54,16 @@ struct ContentView: View {
                         InsideView()
                     } label: {
                         Button("Sign in") {
+                            
                             Auth.auth().signIn(withEmail: usernameTextField, password: passwordTextField) { result, error in
                                 if error == nil {
-                                    guard let userEmail = Auth.auth().currentUser?.email else {return}
-                                    navStatus = true
-                                    Firestore.firestore().collection("users").document(userEmail).setData(["name":"hey"])
+//                                    guard let userEmail = Auth.auth().currentUser?.email else {return}
                                     print("Sign in success")
                                     loginState = true
                                     UserDefaults.standard.set(loginState, forKey: "userLog")
-                                    
+                                    navStatus = true
                                 } else {
-                                    print(error)
+                                    print(error!)
                                 }
                             }
                             print("Hello")
@@ -86,11 +85,6 @@ struct ContentView: View {
                         Text("New here?")
                             .padding()
                         NavigationLink(destination:  SignupView()) {
-//                            Button("Create an account") {
-//                            signUpActive = true
-//                                print(passwordTextField)
-//                            }
-//                            .foregroundColor(.teal)
                             Text("Create an account")
                                 .foregroundColor(.teal)
                         }

@@ -10,33 +10,73 @@ import FirebaseAuth
 import FirebaseFirestore
 
 struct InsideView: View {
+    @ObservedObject var modal = ViewModel()
     @Environment(\.presentationMode) var presentation
     @State var isActive = false
-    let user = Auth.auth().currentUser?.email
+    @State var todoName = ""
+    
+    init() {
+        guard let user = Auth.auth().currentUser?.email else { return }
+        modal.getTodo(email: user)
+        
+        print("user \(user)")
+        
+    }
     var body: some View {
-        HStack {
-            
-            Text("Hello \(user!)")
-            
-            NavigationLink(isActive: $isActive) {
-                ContentView()
-            } label: {
+        VStack {
+            Text("Welcome back user ! 😆")
+                .foregroundColor(.teal)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .font(.system(size: 20))
+            VStack {
                 
-                Button("Signout") {
-                    do {
-                        try Auth.auth().signOut()
-                        isActive = true
-                        loginState = false
-                        UserDefaults.standard.set(loginState, forKey: "userLog")
-                        presentation.wrappedValue.dismiss()
-                    } catch {
-                        print("error")
-                    }
+                Spacer()
+                
+                List (modal.list) { items in
+                    Text(items.titleName)
                 }
+                
+                HStack {
+                    TextField("Add new Todo here", text: $todoName)
+                        
+                    Button {
+                        guard let user = Auth.auth().currentUser?.email else { return }
+                        modal.addNewTodo(email: user , taskName: todoName)
+                        todoName = ""
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .foregroundColor(.teal)
+                    }
+                    
 
+                }
+                .padding()
+
+                
+                NavigationLink(isActive: $isActive) {
+                    ContentView()
+                } label: {
+                    Button("Signout") {
+                        do {
+                            
+                            try Auth.auth().signOut()
+                            isActive = true
+                            loginState = false
+                            UserDefaults.standard.set(loginState, forKey: "userLog")
+                            presentation.wrappedValue.dismiss()
+                        } catch {
+                            print("error")
+                        }
+                    }
+                    .buttonStyle(.bordered)
+                    .foregroundColor(.teal)
+                    .padding()
+                }
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
         
             
     }

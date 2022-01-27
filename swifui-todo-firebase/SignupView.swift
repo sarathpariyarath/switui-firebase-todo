@@ -54,9 +54,9 @@ struct SignupView: View {
                     InsideView()
                 } label: {
                     Button("SIGN UP") {
-                        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                        Auth.auth().createUser(withEmail: email.lowercased(), password: password) { result, error in
                             if error == nil {
-                
+                                
                                 errorMessage = "Signup success"
                                 navActive = true
                                 

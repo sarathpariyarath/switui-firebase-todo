@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		37289FCB27A26C27004A30CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37289FCA27A26C27004A30CE /* GoogleService-Info.plist */; };
-		37289FCE27A26CD1004A30CE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37289FCD27A26CD1004A30CE /* File.swift */; };
 		3732574F279EBDE100FA1F32 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3732574E279EBDE100FA1F32 /* SignupView.swift */; };
 		379F8AE327A278970051B251 /* InsideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F8AE227A278970051B251 /* InsideView.swift */; };
+		37B8986B27A2A07800112C9D /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8986A27A2A07800112C9D /* Todo.swift */; };
+		37B8986D27A2A11B00112C9D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8986C27A2A11B00112C9D /* ViewModel.swift */; };
 		37DD17A6279E9166000FBCC1 /* swifui_todo_firebaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */; };
 		37DD17A8279E9166000FBCC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD17A7279E9166000FBCC1 /* ContentView.swift */; };
 		37DD17AA279E9168000FBCC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DD17A9279E9168000FBCC1 /* Assets.xcassets */; };
@@ -20,10 +21,11 @@
 
 /* Begin PBXFileReference section */
 		37289FCA27A26C27004A30CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		37289FCD27A26CD1004A30CE /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3732574E279EBDE100FA1F32 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		379F8AE227A278970051B251 /* InsideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideView.swift; sourceTree = "<group>"; };
 		37A14F5D27A016410032B30C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		37B8986A27A2A07800112C9D /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		37B8986C27A2A11B00112C9D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		37DD17A2279E9166000FBCC1 /* swifui-todo-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifui-todo-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifui_todo_firebaseApp.swift; sourceTree = "<group>"; };
 		37DD17A7279E9166000FBCC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,12 +48,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37289FCC27A26CC0004A30CE /* firebase helper */ = {
+		37B8986827A29F2E00112C9D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				37289FCD27A26CD1004A30CE /* File.swift */,
+				37B8986C27A2A11B00112C9D /* ViewModel.swift */,
 			);
-			path = "firebase helper";
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		37B8986927A29F3C00112C9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37B8986A27A2A07800112C9D /* Todo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		37DD1799279E9166000FBCC1 = {
@@ -75,7 +85,8 @@
 		37DD17A4279E9166000FBCC1 /* swifui-todo-firebase */ = {
 			isa = PBXGroup;
 			children = (
-				37289FCC27A26CC0004A30CE /* firebase helper */,
+				37B8986927A29F3C00112C9D /* Model */,
+				37B8986827A29F2E00112C9D /* ViewModel */,
 				37A14F5D27A016410032B30C /* Info.plist */,
 				37289FCA27A26C27004A30CE /* GoogleService-Info.plist */,
 				37DD17A5279E9166000FBCC1 /* swifui_todo_firebaseApp.swift */,
@@ -102,7 +113,6 @@
 				C1EDE9B549E121994B2597E9 /* Pods-swifui-todo-firebase.debug.xcconfig */,
 				AAC3DD6527D91ECCE080E217 /* Pods-swifui-todo-firebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,10 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3732574F279EBDE100FA1F32 /* SignupView.swift in Sources */,
-				37289FCE27A26CD1004A30CE /* File.swift in Sources */,
 				37DD17A8279E9166000FBCC1 /* ContentView.swift in Sources */,
 				37DD17A6279E9166000FBCC1 /* swifui_todo_firebaseApp.swift in Sources */,
 				379F8AE327A278970051B251 /* InsideView.swift in Sources */,
+				37B8986D27A2A11B00112C9D /* ViewModel.swift in Sources */,
+				37B8986B27A2A07800112C9D /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
