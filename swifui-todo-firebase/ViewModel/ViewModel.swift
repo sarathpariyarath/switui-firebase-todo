@@ -43,4 +43,10 @@ class ViewModel: ObservableObject {
         getTodo(email: email)
         
     }
+    
+    func setIsCompleted(todo: Todo, email: String, status: Bool) {
+        let db = Firestore.firestore()
+        db.collection("users").document(email).collection("todos").document(todo.id).setData(["isCompleted" : status, "titleName": todo.titleName])
+        getTodo(email: email)
+    }
 }

@@ -57,7 +57,6 @@ struct ContentView: View {
                             
                             Auth.auth().signIn(withEmail: usernameTextField, password: passwordTextField) { result, error in
                                 if error == nil {
-//                                    guard let userEmail = Auth.auth().currentUser?.email else {return}
                                     print("Sign in success")
                                     loginState = true
                                     UserDefaults.standard.set(loginState, forKey: "userLog")

@@ -35,8 +35,17 @@ struct InsideView: View {
                 
                 List (modal.list) { items in
                     HStack {
+                        if items.isCompleted == true {
+                            Image(systemName: "checkmark.circle")
+                        } else if items.isCompleted == false {
+                            Image(systemName: "circle")
+                        }
+                        
+                        
                         Text(items.titleName)
+
                         Spacer()
+                        
                         Button {
                             guard let user = Auth.auth().currentUser?.email else { return }
                             modal.deleteTodo(email: user, todo: items)
@@ -45,6 +54,18 @@ struct InsideView: View {
                         }
                         .buttonStyle(.borderless)
                         .foregroundColor(.teal)
+                        
+
+                    }.swipeActions(edge: .trailing) {
+                        
+                        Button {
+                            var status: Bool = items.isCompleted
+                            status.toggle()
+                            guard let user = Auth.auth().currentUser?.email else { return }
+                            modal.setIsCompleted(todo: items, email: user, status: status)
+                        } label: {
+                            Text("Mark as Completed")
+                        }
 
                     }
                 }

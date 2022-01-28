@@ -10,5 +10,5 @@ import Foundation
 struct Todo: Identifiable {
     let id: String
     let titleName: String
-    let isCompleted: Bool
+    var isCompleted: Bool
 }
